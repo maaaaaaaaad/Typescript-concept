@@ -42,7 +42,7 @@ class LRdirection<L, R> implements LeftOrRight<L, R> {
   }
 }
 
-const lr = new LRdirection(5, 10);
+const lr = new LRdirection(5, "five"); // or possible const lr = new LR...({object} , text);
 const firParameter = lr.left();
 const secParameter = lr.right();
 
