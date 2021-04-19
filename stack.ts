@@ -31,6 +31,8 @@ class StackImpl implements Stack {
       throw new Error("Stack is empty!");
     }
     const node = this.head;
+    this.head = node.next; // head has value & next. next has StackNode
     this._size--;
+    return node.value; // pop() must be return. so pop() has "string" type.
   }
 }
