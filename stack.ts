@@ -14,11 +14,16 @@ class StackImpl implements Stack {
   private _size: number = 0; // readonly : Not modify inside
   private head?: StackNode;
 
+  constructor(private capacity: number) {} // basically, requirement the capacity
+
   get size() {
     return this._size;
   }
 
   push(value: string) {
+    if (this.size === this.capacity) {
+      throw new Error("Stack is full");
+    }
     const node: StackNode = { value: value, next: this.head }; //value : value = value
     this.head = node;
     this._size++;
@@ -36,3 +41,5 @@ class StackImpl implements Stack {
     return node.value; // pop() must be return. so pop() has "string" type.
   }
 }
+
+const stack = new StackImpl(10); // 10 is cpapcity
