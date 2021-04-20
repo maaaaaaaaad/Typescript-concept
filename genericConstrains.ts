@@ -57,3 +57,5 @@
   const resultAddress = getValue(information, "address");
   const resultAge = getValue(information, "age");
 }
+
+// object key has string type
