@@ -3,7 +3,7 @@
     title: string;
     subTitle?: string;
     description: string;
-    feeling: string;
+    feeling?: string;
     prioritry: "high" | "low";
   };
 
@@ -21,6 +21,7 @@
 
   const fieldsToUpdate = {
     title: "nono",
+    message: "Awesome to Typescript !!",
   };
 
   const updated = updateTodo(todo, fieldsToUpdate);
