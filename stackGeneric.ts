@@ -1,5 +1,5 @@
 {
-  // modified stack.ts generic version.
+  // stack.ts extension that generic version.
 
   interface Stack<T> {
     readonly size: number;
